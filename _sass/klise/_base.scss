@@ -59,6 +59,20 @@ body {
   box-sizing: border-box;
 }
 
+.menu-link:has(> img,svg) {
+  padding: 0 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a.menu-link svg, a.menu-link img {
+  height: 32px;
+}
+
+#gh-icon-path {
+  fill: $text-base-color;
+}
+
 // Set `margin-bottom` to maintain vertical rhythm
 h1,
 h2,
@@ -160,7 +174,7 @@ ol {
     position: relative;
     counter-increment: li;
     &::before {
-      content: counter(li);
+      content: "[" counter(li) "]";
       display: inline-block;
       width: 1em;
       margin-right: 0.5em;
@@ -180,8 +194,7 @@ ol {
 }
 
 li {
-  padding-bottom: 1px;
-  padding-top: 1px;
+  padding-bottom: 25px;
 
   &:before {
     color: $black;
@@ -191,6 +204,10 @@ li {
   > ol {
     margin-bottom: 2px;
     margin-top: 0;
+  }
+
+  p {
+    display: initial;
   }
 }
 

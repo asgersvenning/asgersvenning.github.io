@@ -1,18 +1,21 @@
 ---
-title: Colophon
+title: whoami
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: I'm Asger Svenning, a passionated PhD student within computational biodiversity monitoring, hoping to aid in braking biodiversity declines.
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+<div class="author"><div class="about-avatar"><img src="{{site.author.avatar}}" alt="{{site.author.username}}"/></div></div>
 
-If you have a question about him or else, just send a letter to him.
+| **Name**  | Asger Svenning
+| **Role**  | PhD Student, Department of Ecoscience, Aarhus University, Denmark
+| **Field** | Biology/Ecology --- Computational Biodiversity Monitoring
 
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
+Hey, this is my personal website used to document my academic journey and achievements, as well as some somewhat related posts. 
 
-**may u needs ✨**
+I am a PhD student at the department of Ecoscience at Aarhus University with a project focused on automated and scalable biodiversity monitoring. My research is meant to be broadly applicable, but has a strong focus on insects 🐛 and moths 🦋 in particular. In collaboration with my supervisor Toke T. Høje, our research group and many excellent collaborators, we develop machine learning (~AI 🤖) models, pipelines and associated hardware to capture, count and identify insects and moths on images. 
 
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
+I also have a B.Sc. and half M.Sc. in biology from Aarhus University, in which I specialized in computational and statistical ecology and bioinformatics. I did my bachelors on the functional ecology of trees in the United States using the massive FIA dataset, and have done projects related to animal behavior using traditional GPS-collar data and statistical methods as well as historic population analysis using the **A**ncestral **R**ecombination **G**raph (ARG) and **S**equential **M**arkovian **C**oalescent (SMC) framework.
+
+

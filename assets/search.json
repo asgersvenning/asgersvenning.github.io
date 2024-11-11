@@ -2,8 +2,9 @@
 layout: none
 ---
 
+{% assign everything = site.posts | concat: site.publications %}
 [
-  {% for post in site.posts %}
+  {% for post in everything %}
     {
       "title"    : "{{ post.title | escape }}",
       "description" : "{{ post.description | escape }}",

@@ -74,11 +74,12 @@
 
   .menu-link {
     color: $black;
-    line-height: $base-line-height + 0.4;
+    line-height: 50px;
+    font-size: 28px;
     text-decoration: none;
-    padding: 5px 8px;
-    opacity: 0.7;
-    letter-spacing: 0.3px;
+    padding: 5px 16px;
+    opacity: 0.5;
+    letter-spacing: 0.3px;  
 
     &:hover {
       opacity: 1;
@@ -94,9 +95,6 @@
       outline: none;
     }
 
-    @include media-query($on-mobile) {
-      opacity: 0.8;
-    }
   }
 
   .menu-link.active {
@@ -132,15 +130,6 @@
       cursor: pointer;
       text-align: center;
       z-index: 1;
-      > svg {
-        fill: $black;
-        opacity: 0.7;
-      }
-      &:hover {
-        > svg {
-          opacity: 1;
-        }
-      }
       &:active {
         -webkit-transform: scale(0.9, 0.9);
         transform: scale(0.9, 0.9);
@@ -169,11 +158,9 @@
     .menu-link {
       display: block;
       box-sizing: border-box;
-      font-size: 1.1em;
 
       &:not(:last-child) {
-        margin: 0;
-        padding: 2px 0;
+        margin: 3vh auto;
       }
     }
   }
@@ -181,17 +168,15 @@
 
 // Author
 .author {
-  margin-top: 6.3rem;
-  margin-bottom: 7.2rem;
   text-align: center;
-
-  @include media-query($on-mobile) {
-    margin-bottom: 3em;
-  }
+  margin: 10vh auto;
 
   .author-avatar {
-    width: 70px;
-    height: 70px;
+    object-fit: cover;
+    object-position: top;
+    width: 350px;
+    height: 350px;
+    max-width: 75vw;
     border-radius: 100%;
     user-select: none;
     background-color: $black;
@@ -210,8 +195,41 @@
   .author-bio {
     margin: 0 auto;
     opacity: 0.9;
-    max-width: 393px;
     line-height: 1.688;
+  }
+
+  .about-avatar {
+    img {
+      border-radius: 100px;
+      max-width: 20vw;
+      max-height: 20vh;
+
+      @include media-query($on-mobile) {
+        max-height: 75vh;
+        max-width: 75vw;
+      }
+    }
+
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: -4em;
+    left: 10%;
+
+    @include media-query($on-mobile) {
+      margin: 0 auto;
+      position: unset;
+      width: 100%;
+      bottom: unset;
+      left: unset;
+    }
+  }
+
+}
+
+.author:has(> div.about-avatar) {
+  @include media-query($on-mobile) {
+    margin: 1%;
   }
 }
 
@@ -260,6 +278,40 @@
       &focus {
         color: $black;
       }
+    }
+
+    h3 {
+      font-size: 2 * $base-font-size;
+    }
+  }
+
+  .post-left-col {
+    display: block; 
+    width: 25%;
+    margin: auto auto; 
+
+    img {
+      max-width: calc(100% - 4 * 8px); 
+      max-height: 60px;
+      object-fit: contain; 
+      padding: 8px; 
+      border-radius: 15px; 
+      margin: auto auto;
+      display: block;
+    }
+
+    @include media-query($on-mobile) {
+      width: 35%;
+    }
+  }
+
+  .post-right-col {
+    display: block; 
+    width: 75%; 
+    margin: auto auto; 
+
+    @include media-query($on-mobile) {
+      width: 65%;
     }
   }
 }
@@ -348,7 +400,7 @@
     border-radius: 5px;
     padding: 10px 10px 10px 35px;
     color: $text-base-color;
-    -webkit-appearance: none;
+    // -webkit-appearance: none;
     font-size: $base-font-size;
     background-color: rgba(128, 128, 128, 0.1);
     border: 1px solid rgba(128, 128, 128, 0.1);

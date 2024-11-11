@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2024-11-11T19:50:52+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Asger Svenning</title><subtitle>Biodiversity Monitoring with Machine Learning PhD student at Ecoscience, Aarhus University</subtitle><author><name>Asger Svenning</name><email>asgersvenning@ecos.au.dk</email></author><entry><title type="html">The first post… has a very long title for testing purposes. This is not generally a great idea, but I need to test some things out.</title><link href="http://localhost:4000/first-post/" rel="alternate" type="text/html" title="The first post… has a very long title for testing purposes. This is not generally a great idea, but I need to test some things out." /><published>2024-11-11T16:35:00+01:00</published><updated>2024-11-11T16:35:00+01:00</updated><id>http://localhost:4000/first-post</id><content type="html" xml:base="http://localhost:4000/first-post/"><![CDATA[<p>This is a sample post, to test how the layout of my webpage works with posts.</p>
+
+<h1 id="a-post-might-include-an-image">A post might include an image:</h1>
+
+<figure>
+    <img src="/first-post/wrench.png" />
+    <figcaption> This is a figure - and a caption!</figcaption>
+</figure>
+
+<h1 id="a-bunch-of-text">A bunch of text…</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id diam quis diam bibendum porta. Cras tellus dolor, condimentum ut dapibus ut, dignissim mattis elit. Nullam mattis nunc in ante lobortis ullamcorper. Phasellus accumsan urna non viverra varius. Sed elementum urna eget velit varius ultrices. Nunc ac sapien ut massa vulputate consequat vitae vel lorem.</p>
+
+<p>Proin nulla mauris, dapibus in rhoncus sed, pellentesque nec nibh. Donec vulputate justo a ante condimentum, sit amet vehicula justo fermentum. Cras sit amet massa a ex iaculis tincidunt. Nulla ullamcorper rhoncus iaculis. In hac habitasse platea dictumst. Morbi eu ligula eget mi maximus sodales et at nunc. Integer feugiat purus eu egestas elementum. Vestibulum molestie justo nec odio cursus, eu sodales quam aliquet. Donec auctor nulla nec dolor lacinia dapibus. Maecenas pharetra sit amet orci non gravida.</p>
+
+<h1 id="a-table">a table…</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Some</strong></th>
+      <th><strong>Columns</strong></th>
+      <th><strong>…</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tables</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>are</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>awesome</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="and-some-math">and some math!</h1>
+
+<ol>
+  <li>
+    <p>Select one or more hidden layers, \(L_{\text{reg}}\), in the DNN architecture to regularize.</p>
+  </li>
+  <li>
+    <p>For a given minibatch of \(n\) inputs, perform a forward pass for each input, \(i\), and store the activations, \(\mathbf{A}\), of the chosen layers, \(L_{\text{reg}}\).</p>
+  </li>
+  <li>
+    <p>Calculate a batch activation kernel matrix, \(\mathbf{K_{\mathrm{batch}}}\), given a commutative kernel, \(\omega_B(\mathbf{A_j}, \mathbf{A_k}) \rightarrow \mathcal{R}_{[0,\,1]}\), computed between all pairs, \(j,k\), of the \(n\) inputs. Specifically, the inner product is proposed as the kernel:</p>
+
+\[\mathbf{K}_{\mathrm{batch}, jk} = \left\langle \mathbf{A}_j, \mathbf{A}_k \right\rangle\]
+
+    <p>To ensure non-negativity, the following modification is applied:</p>
+
+\[\mathbf{K}_{\mathrm{batch}, jk} = \frac{2 - \left(\langle \widehat{\mathbf{A}_j}, \widehat{\mathbf{A}_k} \rangle + 1\right)}{2}\]
+
+    <p>Consequently, \(\mathbf{K_\mathrm{batch}} \in \mathcal{R}_{[0, 1]}^{n \times n}\), simplifying further analyses. Efficient computation is as follows:</p>
+
+\[\mathbf{K}_{\mathrm{batch}} = \frac{1}{2} - \frac{\widehat{\mathbf{A}} \cdot \widehat{\mathbf{A}}^\mathrm{T}}{2}\]
+
+    <p>A downside is that this kernel is scale-invariant, so other kernels might be more appropriate. A few suggestions are the Euclidean distance:</p>
+
+\[\mathbf{K}_{\mathrm{batch}, jk} = \lVert \mathbf{A}_j, \mathbf{A}_k \rVert^2\]
+
+    <p>which unfortunately does not conform to \(\mathcal{R}_{[0, 1]}\) but instead \(\mathcal{R}^+\), or the Radial Basis Function:</p>
+
+\[\mathbf{K}_{\mathrm{batch}, jk} = 1 - \exp{\left(-\frac{\lVert \mathbf{A}_j, \mathbf{A}_k \rVert^2}{\sigma^2}\right)}\]
+  </li>
+  <li>
+    <p>The expected batch activation kernel matrix is based on the kernel structure for items \(i\), defined by their classes \(C_i\) and the class structure \(S_C\):</p>
+
+\[E(\mathbf{K}_{\mathrm{batch}, jk}; \mathbf{C}, S_C) = \omega_s(\mathbf{C}_j, \mathbf{C}_k;\; S_C)\]
+
+    <p>I will call this the batch structure kernel matrix:</p>
+
+\[\mathbf{K}_{\mathrm{struct}} = E(\mathbf{K}_{\mathrm{batch}}; \mathbf{C}, S_C)\]
+  </li>
+  <li>
+    <p>Compute a “class structure” loss function, \(\mathcal{L}_{S(i, S_C)}\), and incorporate it into the regular loss:</p>
+
+\[\begin{align*}
+     \mathcal{L}^* &amp;= \mathcal{L}(i) + \lambda\mathcal{L}_S(\mathbf{C}, \mathbf{A}; S_C) \\
+     \mathcal{L}_S(i) &amp;= \frac{\lVert \mathbf{K}_{\mathrm{struct}}(\mathbf{C}; S_C) - \mathbf{K}_{\mathrm{batch}}(\mathbf{A}) \rVert_F}{n^2 - n}
+ \end{align*}\]
+
+    <p>Where \(\lambda\) is a scaling factor for the regularization term, and \(\mathbf{A}\) is the stacked activations of \(L_{reg}\) given an input batch and \(\mathbf{C}\) are the labels of the batch.</p>
+  </li>
+  <li>
+    <p>For multiple class structures, a loss is calculated separately for each structure, and each is added to the total loss.</p>
+
+    <p><strong>Note</strong>: \(\mathbf{K_\mathrm{batch}}\) only needs to be computed once, so only step <strong>[5]</strong> must be recomputed (if \(\mathbf{K_\mathrm{struct}}\) is cached efficiently).</p>
+  </li>
+</ol>]]></content><author><name>Asger Svenning</name><email>asgersvenning@ecos.au.dk</email></author><category term="jekyll" /><category term="webpage" /><category term="test" /><summary type="html"><![CDATA[This is simply a sample post, to test how the layout works with posts.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/first-post/wrench.png" /><media:content medium="image" url="http://localhost:4000/first-post/wrench.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
