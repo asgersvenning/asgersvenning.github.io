@@ -1,0 +1,16 @@
+---
+layout: none
+---
+
+{% assign everything = site.posts | concat: site.publications %}
+[
+  {% for post in everything %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "description" : "{{ post.description | escape }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

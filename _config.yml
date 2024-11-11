@@ -1,0 +1,94 @@
+# Site settings
+title: Asger Svenning # site title
+description: >- # site description
+  Biodiversity Monitoring with Machine Learning PhD student at Ecoscience, Aarhus University
+lang: en-US # default lang
+timezone: Europe/Copenhagen # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/asgersvenning/asgersvenning.github.io # site repo [optional]
+mode: dark # default theme "dark" | "light"
+
+# Profile settings
+author:
+  name: Asger Svenning # author name
+  bio: >- # tell to the world
+    Hi! This is my (Asger Svenning) personal webpage. I am a PhD student in what I like to call <i>"biodiversity informatics"</i> or <i>"computational biodiversity monitoring"</i> with an entomological focus.  
+    I use it as my personal academic repository, continuously updated with publications I participate in - 
+    and posts of varying relevance, but hopefully great interest. 
+  username: asger # general username
+  github: asgersvenning # github username
+  twitter: SvenningAsger # twitter username
+  facebook: Asger Svenning # facebook username
+  email: asgersvenning@ecos.au.dk # email adress
+  avatar: https://pure.au.dk/portal/files-asset/390226473/profil_manaus_medium.jpg?w=500&f=webp # change with your own avatar
+
+# URL settings
+url: "https://asgersvenning.github.io/" #
+baseurl: "/"
+permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
+
+# Collection setting
+collections:
+  posts:
+    output: true
+  publications:
+    output: true
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
