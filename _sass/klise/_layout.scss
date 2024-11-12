@@ -257,7 +257,6 @@
     min-width: 96px;
     color: $black;
     font-weight: 700;
-    padding-right: 10px;
 
     @include media-query($on-mobile) {
       font-size: 16px;
@@ -305,9 +304,9 @@
       max-width: calc(100% - 4 * 8px); 
       max-height: 60px;
       object-fit: contain; 
-      padding: 8px; 
       border-radius: 15px; 
       margin: auto auto;
+      margin-top: 10px;
       display: block;
     }
 
