@@ -193,6 +193,7 @@
   }
 
   .author-bio {
+    text-align: left;
     margin: 0 auto;
     opacity: 0.9;
     line-height: 1.688;
@@ -283,6 +284,16 @@
     h3 {
       font-size: 2 * $base-font-size;
     }
+  }
+
+  .post-item-thumbnail {
+    margin: 0 0 0 auto;
+    max-height: 50px;
+    max-width: 100px;
+    object-fit: contain;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 10px;
   }
 
   .post-left-col {

@@ -59,5 +59,10 @@ $on-widescreen: 1152px;
 }
 
 // Import sass files
-@import "klise/fonts", "klise/base", "klise/layout", "klise/post",
+
+// Klise styles
+@import "klise/fonts", "klise/base", "klise/layout", "klise/post", 
   "klise/miscellaneous", "klise/syntax", "klise/dark";
+
+// Custom styles
+@import "posts/js_demo";

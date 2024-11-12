@@ -12,7 +12,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Asger Svenning # author name
   bio: >- # tell to the world
-    Hi! This is my (Asger Svenning) personal webpage. I am a PhD student in what I like to call <i>"biodiversity informatics"</i> or <i>"computational biodiversity monitoring"</i> with an entomological focus.  
+    Hi! This is my personal webpage. I am a PhD student in what I like to call <i>"biodiversity informatics"</i>&nbsp; or <i>"computational biodiversity monitoring"</i>&nbsp; with an entomological focus.  
     I use it as my personal academic repository, continuously updated with publications I participate in - 
     and posts of varying relevance, but hopefully great interest. 
   username: asger # general username

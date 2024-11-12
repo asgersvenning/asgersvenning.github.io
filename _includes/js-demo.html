@@ -1,0 +1,36 @@
+<script type="text/javascript">
+window.onload = function() {
+    document.getElementById("js-demo").onclick = DemoToggleText;
+};
+
+function DemoToggleText() {
+    var text = document.getElementById("js-demo");
+
+    /* Define keyframes for smooth rotation and scaling */
+    const keyframes = [
+        {
+            transform: 'rotate(0deg) scale(1)',
+            fontWeight: 400
+        },
+        {
+            transform: 'rotate(180deg) scale(2)',
+            fontWeight: 800
+        },
+        {
+            transform: 'rotate(360deg) scale(1)',
+            fontWeight: 400
+        }
+    ];
+
+    /* Define timing options */
+    const options = {
+        duration: 2000,
+        /* Smooth easing across the entire animation */
+        easing: 'cubic-bezier(0.42, -0.5, 0.58, 1.5)', 
+        iterations: 1
+    };
+
+    /* Start the animation */
+    text.animate(keyframes, options);
+}
+</script>
