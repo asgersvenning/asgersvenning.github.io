@@ -29,6 +29,8 @@ permalink: /:title/
 google_analytics: # leave it blank if not wish
 fb_appid:
 
+google_site_verification: JrBVkOGnSd414SEK6VH0CLaMT7GirO6ZhKxmRVP8PSo
+
 # Collection setting
 collections:
   posts:
