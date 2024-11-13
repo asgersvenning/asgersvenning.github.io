@@ -140,7 +140,10 @@ figure {
 // Image inside Figure tag
 figure > img {
   display: block;
-  position: relative;
+  position: relative; 
+  border-radius: 2px; 
+  padding: 5px; 
+  max-width: calc(100% - 10px);
 }
 
 // Image caption

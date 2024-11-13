@@ -49,7 +49,7 @@ eucl_mat = torch.cdist(last_layer_weights, last_layer_weights)
 Which produces the following distance matrices:
 
 <figure>
-    <img src="/classification-weight-analysis/dmat.png">
+    <img src="/classification-weight-analysis/imagenet1k_dmat.png">
     <figcaption> Pairwise cosine similarity and euclidean distance matrices between all classes in the `ImageNet1K` dataset, based on the last-layer weights of a pretrained `ResNet50`.</figcaption>
 </figure>
 
@@ -96,7 +96,7 @@ dendr  = dendrogram(
 Which produces the following:
 
 <figure>
-    <img src="/classification-weight-analysis/i1k_dendrogram.svg" style="background-color: color-mix(in hsl, beige, black 15%); border-radius: 50%; padding: 5px;">
+    <img src="/classification-weight-analysis/imagenet1k_circular_dendrogram.svg" style="border-radius: 50%;">
     <figcaption> Hierarchical clustering of the `ImageNet1K` dataset classes based on the last-layer weights of a pretrained `ResNet50`. (Zoom in! 🙈)</figcaption>
 </figure>
 

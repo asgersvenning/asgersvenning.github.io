@@ -6,6 +6,11 @@ body[data-theme="dark"] {
     fill: $dark-text-base-color;
   }
 
+  figure > img {
+    // background-color: color-mix(in hsl, beige, black 25%);
+    background-color: adjust-color($color: $dark-black, $saturation: -50%, $lightness: 65%);
+  }
+
   // Heading
   h1,
   h2,
