@@ -280,19 +280,27 @@
       }
     }
 
-    h3 {
-      font-size: 2 * $base-font-size;
+  }
+  
+  h3.post-item-title {
+    font-size: 1.25 * $base-font-size;
+    @include media-query($on-mobile) {
+      font-size: 1 * $base-font-size;
     }
   }
 
   .post-item-thumbnail {
     margin: 0 0 0 auto;
-    max-height: 50px;
-    max-width: 100px;
+    max-height: 150px;
+    max-width: 150px;
     object-fit: contain;
     vertical-align: middle;
     padding: 10px;
     border-radius: 10px;
+    @include media-query($on-mobile) {
+        max-height: 100px;
+        max-width: 100px;
+    }
   }
 
   .post-left-col {
@@ -302,7 +310,7 @@
 
     img {
       max-width: calc(100% - 4 * 8px); 
-      max-height: 60px;
+      max-height: 100px;
       object-fit: contain; 
       border-radius: 15px; 
       margin: auto auto;
@@ -312,6 +320,9 @@
 
     @include media-query($on-mobile) {
       width: 35%;
+      img {
+        max-height: 50px;
+      }
     }
   }
 
