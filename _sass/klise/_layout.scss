@@ -296,10 +296,11 @@
     object-fit: contain;
     vertical-align: middle;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15%;
     @include media-query($on-mobile) {
         max-height: 100px;
         max-width: 100px;
+        border-radius: 20px;
     }
   }
 
@@ -312,7 +313,7 @@
       max-width: calc(100% - 4 * 8px); 
       max-height: 100px;
       object-fit: contain; 
-      border-radius: 15px; 
+      border-radius: 15%; 
       margin: auto auto;
       margin-top: 10px;
       display: block;
