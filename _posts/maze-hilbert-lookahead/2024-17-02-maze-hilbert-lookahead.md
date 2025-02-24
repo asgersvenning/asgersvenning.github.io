@@ -5,6 +5,7 @@ modified: 17-02-2025 19:34 CET
 tags: [maze generation, algorithm, animation, minecraft]
 description: I investigate a fun algorithm for generating mazes in an embarrasingly parallel manner
 image: "/maze-hilbert-lookahead/animation_thumbnail.png"
+usemathjax: true
 ---
 # The Hilbert Lookahead Algorithm
 ## The discovery
@@ -98,7 +99,8 @@ def xy2d(N, x, y):
     return d
 ```
 
-If we look at the second function `xy2d`, we see that it calculates the order of a single coordinate---perfect for parallelization, further establishing the choice of the Hilbert Curve.
+If we look at the second function `xy2d`, we see that it calculates the order of a single coordinate---perfect for parallelization, further establishing the choice of the Hilbert Curve. 
+<!-- Also note that `s` decreases by a factor of two for each iteration of the while loop inside `xy2d` giving the complexity $$O(N)=\log(N)$$. -->
 
 As an aside, here is how I created the Hilbert Curve in the figure above:
 
@@ -175,7 +177,7 @@ Let's try to use it:
 
 <figure>
     <img src="/maze-hilbert-lookahead/4x4_maze.png">
-    <figcaption> 16 random 16x16 mazes generated with the _**Hilbert Lookahead Algorithm**_. </figcaption>
+    <figcaption> 16 random 16x16 mazes generated with the <b><i>Hilbert Lookahead Algorithm</i></b>. </figcaption>
 </figure>
 
 Success 🎉🎉
@@ -255,7 +257,7 @@ plt.savefig("hilbert_lookahead_possibilities.png", transparent=True)
 
 <figure>
     <img src="/maze-hilbert-lookahead/hilbert_lookahead_possibilities.png">
-    <figcaption> All possible edges for a maze generated with the _**Hilbert Lookahead Algorithm**_. (Left) The edges shown without any visual guides. (Right) The edges annotated and colored by their "direction", edges are also thicker and more opaque the more likely they are to be selected. The direction of an edge is given from the node which selected the edge using the local rule in the Hilbert Lookahead Algorithm. Guaranteed edges are black. </figcaption>
+    <figcaption> All possible edges for a maze generated with the <b><i>Hilbert Lookahead Algorithm</i></b>. (Left) The edges shown without any visual guides. (Right) The edges annotated and colored by their "direction", edges are also thicker and more opaque the more likely they are to be selected. The direction of an edge is given from the node which selected the edge using the local rule in the Hilbert Lookahead Algorithm. Guaranteed edges are black. </figcaption>
 </figure>
 
 As can be seen, there are many edges which are always selected, many which are selected 50% of the time and many which are selected 33% of the time.
@@ -319,7 +321,7 @@ plt.savefig("4x4_solution.png", transparent=True)
 
 <figure>
     <img src="/maze-hilbert-lookahead/4x4_solution.png">
-    <figcaption> 16 random 16x16 mazes with the solution marked in red generated with the _**Hilbert Lookahead Algorithm**_. </figcaption>
+    <figcaption> 16 random 16x16 mazes with the solution marked in red generated with the <b><i>Hilbert Lookahead Algorithm</i></b>. </figcaption>
 </figure>
 
 That actually looks pretty good to me.
