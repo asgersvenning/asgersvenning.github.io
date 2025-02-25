@@ -75,7 +75,9 @@ Luckily for us, there exists an easy way to generate the Hilbert Curve (here imp
 
 ```py
 def rot(s, x, y, rx, ry):
-    """Rotate/flip a quadrant as part of the Hilbert index algorithm."""
+    """
+    Rotate/flip a quadrant as part of the Hilbert index algorithm.
+    """
     if ry == 0:
         if rx == 1:
             x = s - 1 - x
@@ -267,7 +269,9 @@ When I saw the the pattern above I immediately questioned whether the generated 
 
 ```py
 def build_undirected_adjacency(edges):
-    """Convert directed edges {u: v} into an undirected adjacency list."""
+    """
+    Convert directed edges {u: v} into an undirected adjacency list.
+    """
     adj = defaultdict(list)
     for u, v in edges.items():
         adj[u].append(v)
@@ -275,7 +279,9 @@ def build_undirected_adjacency(edges):
     return adj
 
 def bfs_path(adj, start, goal):
-    """Find a path from start to goal in the undirected graph using BFS."""
+    """
+    Find a path from start to goal in the undirected graph using BFS.
+    """
     queue = deque([(start, [start])])
     visited = set([start])
     while queue:
@@ -339,7 +345,7 @@ And here comes the (pretty long) `matplotlib` code for creating the animation---
 
 ```py
 ## Animation helpers
-def interp_dir(start, end, t):
+def uv_lerp(start, end, t):
     (x0, y0), (x1, y1) = start, end
     rad_start, rad_end = math.atan2(y0, x0), math.atan2(y1, x1)
     
@@ -394,8 +400,10 @@ def animate(
     path = bfs_path(adj, (0, 0), (N - 1, N - 1))
 
     # Prepare drawing elements
-    hilbert_edges : \
-        dict[tuple[int, int], tuple[mpatches.FancyArrow, float, float, float, float]] = dict()
+    hilbert_edges : dict[
+            tuple[int, int], 
+            tuple[mpatches.FancyArrow, float, float, float, float]
+        ] = dict()
     for (x1, y1), (x2, y2) in zip(curve, curve[1:]):
         arrow = ax.arrow(
             x1, y1, x2 - x1, y2 - y1,
@@ -406,8 +414,9 @@ def animate(
         hilbert_edges[(x1, y1)] = (arrow, x1, y1, x2 - x1, y2 - y1)
 
 
-    edge_arrows : \
-        list[tuple[mpatches.FancyArrow, float, float, float, float]] = []
+    edge_arrows : list[
+            tuple[mpatches.FancyArrow, float, float, float, float]
+        ] = []
     # Draw all valid edges in color depending on their direction
     for (x1, y1), (x2, y2) in valid_edges:
         dx, dy = x2 - x1, y2 - y1
@@ -430,8 +439,10 @@ def animate(
         )
         edge_arrows.append((arrow, x1, y1, dx * 0.75, dy * 0.75))
 
-    chosen_edges : \
-        dict[tuple[int, int], tuple[mpatches.FancyArrow, float, float, float, float]] = dict()
+    chosen_edges : dict[
+            tuple[int, int], 
+            tuple[mpatches.FancyArrow, float, float, float, float]
+        ] = dict()
     for (x1, y1), (x2, y2) in edges.items():
         arrow = ax.arrow(
             [], [], [], [],
@@ -441,8 +452,9 @@ def animate(
         )
         chosen_edges[(x1, y1)] = (arrow, x1, y1, x2 - x1, y2 - y1)
 
-    bfs_path_lines : \
-        list[tuple[mpatches.FancyArrow, float, float, float, float]] = []
+    bfs_path_lines : list[
+            tuple[mpatches.FancyArrow, float, float, float, float]
+        ] = []
     if path:
         for i in range(len(path) - 1):
             x1, y1 = path[i]
@@ -475,7 +487,8 @@ def animate(
 
     # Animation function
     def update(frame):
-        # List for storing elements scheduled to be deleted/added in current frame
+        # List for storing elements scheduled for
+        # deletion/addition in current frame
         add_elems = []
         del_elems = []
 
@@ -539,7 +552,7 @@ def animate(
                 _, _, _, sdx, sdy = chosen_edges[(x, y)]
                 dist = ((2 * x/(N - 1) - 1)**2 + (2 * y/(N - 1) - 1)**2)**(1/2)
                 dist_f = min(1, max(0, 3 * epoch_f - 2**(1/2) * dist))
-                dx_adj, dy_adj = interp_dir((dx, dy), (sdx, sdy), easing(dist_f))
+                dx_adj, dy_adj = uv_lerp((dx, dy), (sdx, sdy), easing(dist_f))
                 dx_adj *= 0.75
                 dy_adj *= 0.75
                 if dist_f > 0 and (x, y) not in arrow_removed:
@@ -567,7 +580,7 @@ def animate(
             
             # Extract the solution segment to be added in the current frame
             bfs_so_far = bfs_path_lines[
-                max(0,math.floor(len(bfs_path_lines) * last_epoch_f)-1)
+                max(0, math.floor(len(bfs_path_lines) * last_epoch_f) - 1)
                 :
                 math.ceil(len(bfs_path_lines) * epoch_f)
             ]
