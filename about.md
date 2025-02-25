@@ -7,7 +7,7 @@ excerpt: I'm Asger Svenning, a passionated PhD student within computational biod
 comments: false
 ---
 
-<div class="author"><div class="about-avatar"><img src="{{site.author.avatar}}" alt="{{site.author.username}}"/></div></div>
+<div class="author" style="display: inline-block;"><div class="about-avatar"><img src="{{site.author.avatar}}" alt="{{site.author.username}}"/></div></div>
 
 <table style="max-width: 90vw; width: 650px;">
 <tbody>

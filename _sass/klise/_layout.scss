@@ -170,10 +170,10 @@
 .author {
   text-align: center;
   margin: 60px auto;
-  display: inline-block;
-  @include media-query($on-mobile) {
-    display: unset;
-  }
+  // display: inline-block;
+  // @include media-query($on-mobile) {
+  //   display: unset;
+  // }
 
   .author-avatar {
     object-fit: cover;
