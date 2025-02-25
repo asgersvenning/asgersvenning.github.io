@@ -8,9 +8,22 @@ comments: false
 
 <div class="author"><div class="about-avatar"><img src="{{site.author.avatar}}" alt="{{site.author.username}}"/></div></div>
 
-| **Name**  | Asger Svenning
-| **Role**  | PhD Student, Department of Ecoscience, Aarhus University, Denmark
-| **Field** | Biology/Ecology --- Computational Biodiversity Monitoring
+<table style="max-width: 90vw; width: 650px;">
+<tbody>
+    <tr>
+        <td style="max-width: 10vw; width: 150px;"> <span style="float: right; font-weight: bold;"> Name </span> </td>
+        <td> <span style="float: left;"> Asger Svenning </span> </td>
+    </tr>
+    <tr>
+        <td> <span style="float: right; font-weight: bold;"> Role </span> </td>
+        <td> <span style="float: left;"> PhD Student, Department of Ecoscience, Aarhus University, Denmark </span> </td>
+    </tr>
+    <tr>
+        <td> <span style="float: right; font-weight: bold;"> Field </span> </td>
+        <td> <span style="float: left;"> Biology/Ecology --- Computational Biodiversity Monitoring </span> </td>
+    </tr>
+</tbody>
+</table>
 
 Hey, this is my personal website used to document my academic journey and achievements, as well as some somewhat related posts. 
 

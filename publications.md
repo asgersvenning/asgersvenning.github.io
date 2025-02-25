@@ -16,6 +16,6 @@ comments: false
     <h3 class="post-item-title" style="margin: auto 0">
       <b>{{ post.date | date: "%b. %d" }}</b> {% include text_divider.html %} <a href="{{ post.doi }}">{{ post.title | escape }}</a>
     </h3> 
-    <img src="{{ post.image }}" style="max-height: 50px; max-width: 100px; object-fit: contain; vertical-align: middle; padding: 10px; border-radius: 10px;">
+    <img class="post-item-thumbnail" src="{{ post.image }}">
   </article>
 {%- endfor -%}

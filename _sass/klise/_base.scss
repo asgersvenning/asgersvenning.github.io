@@ -347,18 +347,24 @@ table {
   margin-top: $spacing-half;
   border-collapse: collapse;
   font-size: $small-font-size;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  margin: 0 auto;
 
   thead {
     font-weight: $bold-weight;
     color: $black;
-    border-bottom: 1px solid $light;
+    // border-bottom: 1px solid $light;
   }
 
   th,
   td,
   tr {
-    border: 1px solid $light;
     padding: 2px 7px;
+  }
+
+  tbody > tr:not(:last-child) {
+    border-bottom: 2px solid rgb(230,230,230);
   }
 }
 
