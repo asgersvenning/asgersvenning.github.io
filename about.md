@@ -1,5 +1,6 @@
 ---
 title: whoami
+title-align: center-right
 permalink: /about/
 layout: page
 excerpt: I'm Asger Svenning, a passionated PhD student within computational biodiversity monitoring, hoping to aid in braking biodiversity declines.

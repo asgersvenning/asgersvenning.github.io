@@ -8,8 +8,13 @@
 
 // Post title
 .header {
-  margin-top: 5em;
-  margin-bottom: 3em;
+  padding-top: 8em;
+  padding-bottom: 5em;
+
+  @include media-query($on-mobile) {
+    padding-top: 3em;
+    padding-bottom: 0em;
+  }
 
   .tags {
     margin-left: 3px;
@@ -33,6 +38,13 @@
 
     &.center {
       text-align: center;
+    }
+
+    &.center-right {
+      padding-left: 25%;
+      @include media-query($on-mobile) {
+        padding-left: unset;
+      }
     }
 
     @include media-query($on-mobile) {

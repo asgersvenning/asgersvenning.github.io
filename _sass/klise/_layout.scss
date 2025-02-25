@@ -169,7 +169,7 @@
 // Author
 .author {
   text-align: center;
-  margin: 10% auto;
+  margin: 60px auto;
   display: inline-block;
   @include media-query($on-mobile) {
     display: unset;
@@ -208,17 +208,16 @@
       border-radius: 100px;
       max-width: 30vw;
       max-height: 30vh;
+      margin-top: 10px;
 
       @include media-query($on-mobile) {
         max-height: 75vh;
         max-width: 75vw;
       }
     }
-
-    margin: 0;
-    display: block;
+    
     position: absolute;
-    top: -4em;
+    top: 0;
     left: 10%;
 
     @include media-query($on-mobile) {
