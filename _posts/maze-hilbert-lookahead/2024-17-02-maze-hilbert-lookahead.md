@@ -14,10 +14,9 @@ I stumbled across this interesting algorithm going by the name *"Hilbert Lookahe
 I found this particularly intriguing, since I would not have imagined it possible to generate mazes in an embarrasingly parallel way, under the constraints that the maze should:
 
 1. Not have any isolated regions---i.e. any node should be reachable from any other node.
-2. There should be no cycles.
-
+2. There should be no cycles. 
 <center><i>(The constraints are chosen such that there is always a single unique solution to the maze.)</i></center>
-</br>
+
 These constraints, on the surface, seem to require at least some form of global coordination, however as demonstrated in the video, that is not the case. 
 
 For example, if we use the most naïve parallel maze generation algorithm possible:
