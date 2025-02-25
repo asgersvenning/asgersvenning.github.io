@@ -364,7 +364,8 @@ table {
   }
 
   tbody > tr:not(:last-child) {
-    border-bottom: 2px solid rgb(230,230,230);
+    border-bottom: 2px solid;
+    border-color: rgb(240,240,240);
   }
 }
 

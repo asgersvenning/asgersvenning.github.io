@@ -23,6 +23,8 @@ body[data-theme="dark"] {
 
   // Table
   table {
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15);
+
     thead {
       color: $dark-white;
       border-color: $dark-light;
