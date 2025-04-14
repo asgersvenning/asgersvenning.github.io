@@ -14,7 +14,7 @@ comments: false
   {%- endunless -%}
   <article class="post-item">
     <h3 class="post-item-title" style="margin: auto 0">
-      <b>{{ post.date | date: "%b. %d" }}</b> {% include text_divider.html %} <a href="{{ post.doi }}">{{ post.title | escape }}</a>
+      <b>{{ post.date | date: "%b. %d" }}</b> {% include text_divider.html %} <a href="{{ post.doi }}">{{ post.title }}</a>
     </h3> 
     <img class="post-item-thumbnail" src="{{ post.image }}">
   </article>

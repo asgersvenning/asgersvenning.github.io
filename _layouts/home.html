@@ -20,7 +20,8 @@ home: true
       {% else %} 
       {% assign url = post.url %}
       {% endif %}
-      <a href="{{ url }}">{{ post.title | escape }}</a>
+      <a href="{{ url }}">{{ post.title }}</a>
+      <p class="post-item-description"> {{ post.description }} </p>
     </h3>
   </div>
 </article>

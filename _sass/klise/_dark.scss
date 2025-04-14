@@ -134,6 +134,7 @@ body[data-theme="dark"] {
   // Navbar
   .navbar {
     border-color: $dark-light;
+    background-color: color-mix(in srgb, $dark-black, transparent 25%);
     .menu {
       a#mode {
         .mode-sunny {
@@ -182,6 +183,10 @@ body[data-theme="dark"] {
           color: $dark-white;
         }
       }
+    }
+
+    .post-item-description {
+      color: color-mix(in hsl, $dark-text-base-color 40%, $text-base-color 60%);
     }
   }
 

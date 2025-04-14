@@ -8,8 +8,8 @@
 
 // Post title
 .header {
-  padding-top: 8em;
-  padding-bottom: 5em;
+  padding-top: 5em;
+  padding-bottom: 0.5em;
 
   @include media-query($on-mobile) {
     padding-top: 3em;
@@ -63,20 +63,20 @@
     position: relative;
     margin-right: 1.5em;
 
-    &::after {
-      background: $light;
-      bottom: 1px;
-      content: " ";
-      height: 2px;
-      position: absolute;
-      right: -20px;
-      width: 12px;
-    }
+    // &::after {
+    //   background: $light;
+    //   bottom: 1px;
+    //   content: " ";
+    //   height: 2px;
+    //   position: absolute;
+    //   right: -20px;
+    //   width: 12px;
+    // }
   }
 
-  span[itemprop="author"] {
-    border-bottom: 1px dotted $light;
-  }
+  // span[itemprop="author"] {
+  //   border-bottom: 1px dotted $light;
+  // }
 }
 
 // Post content

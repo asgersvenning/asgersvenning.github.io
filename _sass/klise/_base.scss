@@ -36,7 +36,8 @@ dl,
 dd,
 ol,
 ul,
-figure {
+figure, 
+video {
   margin: 0;
   padding: 0;
 }
@@ -86,8 +87,7 @@ pre,
 ul,
 ol,
 dl,
-figure,
-%vertical-rhythm {
+figure %vertical-rhythm {
   margin-top: $spacing-full - 20;
   margin-bottom: $spacing-full - 20;
 }
@@ -139,6 +139,14 @@ figure {
 
 // Image inside Figure tag
 figure > img {
+  display: block;
+  position: relative; 
+  border-radius: 2px; 
+  padding: 5px; 
+  max-width: calc(100% - 10px);
+}
+
+video {
   display: block;
   position: relative; 
   border-radius: 2px; 
@@ -297,11 +305,11 @@ blockquote {
 .wrapper {
   max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full} * 2));
   max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
-  position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-full;
   padding-left: $spacing-full;
+  padding-top: 71px;
   @extend %clearfix;
 
   @include media-query($on-mobile) {
@@ -309,6 +317,7 @@ blockquote {
     max-width: calc(#{$narrow-size} - (#{$spacing-full}));
     padding-right: $spacing-full - 10;
     padding-left: $spacing-full - 10;
+    padding-top: 51px;
 
     &.blurry {
       animation: 0.2s ease-in forwards blur;
@@ -392,5 +401,11 @@ mark,
     td {
       border: 0;
     }
+  }
+}
+
+.hide-on-mobile {
+  @include media-query($on-mobile) {
+    display: none;
   }
 }

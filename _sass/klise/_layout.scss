@@ -1,14 +1,26 @@
 // Navbar
 .navbar {
+  position: fixed;
+  top: 0px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
   height: auto;
   max-width: calc(#{$wide-size} - (#{$spacing-full} * 2));
   max-width: -webkit-calc(#{$wide-size} - (#{$spacing-full} * 2));
-  position: relative;
   margin-right: auto;
   margin-left: auto;
   border-bottom: 1px solid $light;
-  padding: $spacing-full - 15px $spacing-full;
+  // padding: $spacing-full - 15px $spacing-full;
+  padding-top: 10px;
   @extend %clearfix;
+  background-color: color-mix(in srgb, $white, transparent 25%);
+
+  @include media-query($on-mobile) {
+    left: 0;
+    right: 0;
+    padding-top: unset;
+  }
 }
 
 // Navigation
@@ -20,7 +32,7 @@
   a#mode {
     float: left;
     left: 8px;
-    top: 6px;
+    top: 12px;
     position: relative;
     clear: both;
     -webkit-transform: scale(1, 1);
@@ -78,7 +90,7 @@
     font-size: 28px;
     text-decoration: none;
     padding: 5px 16px;
-    opacity: 0.5;
+    opacity: 0.75;
     letter-spacing: 0.3px;  
 
     &:hover {
@@ -103,14 +115,8 @@
   }
 
   @include media-query($on-mobile) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
     text-align: center;
     height: 50px;
-    background-color: $white;
     border-bottom: 1px solid $light;
 
     a#mode {
@@ -139,6 +145,8 @@
     input[type="checkbox"]:not(:checked) ~ .trigger {
       clear: both;
       visibility: hidden;
+      height: 0px;
+      width: 0px;
     }
 
     input[type="checkbox"]:checked ~ .trigger {
@@ -169,17 +177,18 @@
 // Author
 .author {
   text-align: center;
-  margin: 60px auto;
-  // display: inline-block;
-  // @include media-query($on-mobile) {
-  //   display: unset;
-  // }
+  margin: 40px auto;
+  display: inline-block;
+  @include media-query($on-mobile) {
+    margin: 2% auto;
+    display: block;
+  }
 
   .author-avatar {
     object-fit: cover;
     object-position: top;
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     max-width: 75vw;
     border-radius: 100%;
     user-select: none;
@@ -206,7 +215,7 @@
   .about-avatar {
     img {
       border-radius: 100px;
-      max-width: 30vw;
+      max-width: calc((920px - (30px * 2))/4);
       max-height: 30vh;
       margin-top: 10px;
 
@@ -217,8 +226,8 @@
     }
     
     position: absolute;
-    top: 0;
-    left: 10%;
+    top: calc((920px - (30px * 2))/4/2);
+    left: calc(50vw - (920px - (30px * 2))/4 - 50px);
 
     @include media-query($on-mobile) {
       margin: 0 auto;
@@ -282,13 +291,21 @@
         color: $black;
       }
     }
-
+  
   }
   
   h3.post-item-title {
     font-size: 1.25 * $base-font-size;
     @include media-query($on-mobile) {
       font-size: 1 * $base-font-size;
+    }
+  }
+
+  .post-item-description {
+    font-size: $base-font-size;
+    color: color-mix(in hsl, $dark-text-base-color 60%, $text-base-color 40%);
+    @include media-query($on-mobile) {
+      font-size: 0.75 * $base-font-size;
     }
   }
 
