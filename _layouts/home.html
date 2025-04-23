@@ -3,25 +3,27 @@ layout: default
 home: true
 ---
 
+
 <h3 class="posts-item-note" aria-label="Recent Activity">Recent Activity</h3>
-{% assign everything = site.posts | concat: site.publications %}
+{% assign everything = site.posts | concat: site.publications | sort: "date" | reverse %}
 {%- for post in everything limit: site.number_of_posts -%}
 <article class="post-item">
   <div class="post-left-col">
     {% if post.image %}
-      <img src="{{ post.image }}" alt="{{post.title}}">
+      <img class="compact" src="{{ post.image }}" alt="{{post.title}}">
     {% endif %}
-    <p class="post-item-date" style="text-align: center;">{{ post.date | date: "%b %d, %Y" }}</p> 
+    <!-- <p class="post-item-date" style="text-align: center;">{{ post.date | date: "%b %d, %Y" }}</p>  -->
   </div>
   <div class="post-right-col">
-    <h3 class="post-item-title">
+    <h3 class="post-item-title truncate-text">
       {% if post.doi %} 
       {% assign url = post.doi %}
       {% else %} 
       {% assign url = post.url %}
       {% endif %}
       <a href="{{ url }}">{{ post.title }}</a>
-      <p class="post-item-description"> {{ post.description }} </p>
+      <p class="post-item-description"> {{ post.date | date: "%b %d, %Y" }} </p>
+      <!-- <p class="post-item-description"> {{ post.description }} </p> -->
     </h3>
   </div>
 </article>

@@ -254,6 +254,20 @@
   color: $black;
 }
 
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 // List of posts
 .post-item {
   display: flex;
@@ -339,6 +353,11 @@
       display: block;
     }
 
+    img.compact {
+      margin-top: unset;
+      max-height: 95px;
+    }
+
     @include media-query($on-mobile) {
       width: 35%;
       img {
@@ -360,7 +379,7 @@
 
 // Footer
 .footer {
-  margin-top: 8em;
+  margin-top: 2em;
   margin-bottom: 2em;
   text-align: center;
 
