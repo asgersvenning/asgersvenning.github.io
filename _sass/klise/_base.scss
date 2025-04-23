@@ -303,6 +303,9 @@ blockquote {
 
 // Wrapper
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 71px);
   max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full} * 2));
   max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
   margin-right: auto;
@@ -313,6 +316,7 @@ blockquote {
   @extend %clearfix;
 
   @include media-query($on-mobile) {
+    min-height: calc(100vh - 51px);
     max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full}));
     max-width: calc(#{$narrow-size} - (#{$spacing-full}));
     padding-right: $spacing-full - 10;
@@ -366,10 +370,14 @@ table {
     // border-bottom: 1px solid $light;
   }
 
-  th,
-  td,
-  tr {
-    padding: 2px 7px;
+  th, td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 20px;
+  }
+
+  tr > td:first-child {
+    padding-left: 20px;
   }
 
   tbody > tr:not(:last-child) {

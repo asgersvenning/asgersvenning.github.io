@@ -9,10 +9,10 @@ comments: false
 <div class="hide-on-mobile" style="height: 8em;"></div>
 <div class="author"><div class="about-avatar"><img src="{{site.author.avatar}}" alt="{{site.author.username}}"/></div></div>
 
-<table style="max-width: 90vw; width: 650px;">
+<table style="max-width: 90vw; width: fit-content;">
 <tbody>
     <tr>
-        <td style="max-width: 10vw; width: 150px;"> <span style="float: right; font-weight: bold;"> Name </span> </td>
+        <td style="max-width: 10vw;"> <span style="float: right; font-weight: bold;"> Name </span> </td>
         <td> <span style="float: left;"> Asger Svenning </span> </td>
     </tr>
     <tr>
@@ -21,7 +21,7 @@ comments: false
     </tr>
     <tr>
         <td> <span style="float: right; font-weight: bold;"> Field </span> </td>
-        <td> <span style="float: left;"> Biology/Ecology --- Computational Biodiversity Monitoring </span> </td>
+        <td> <span style="float: left;"> Biology/Ecology &mdash; Computational Biodiversity Monitoring </span> </td>
     </tr>
 </tbody>
 </table>
