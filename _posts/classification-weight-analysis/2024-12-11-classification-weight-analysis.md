@@ -2,8 +2,8 @@
 title: Quantifying class relationships by training DNN classifiers
 date: 12-11-2024 16:34 CET
 modified: 12-11-2024 23:24 CET
-tags: [AI, neural networks, similarity metric]
-description: I show how you can quantify the relationships between classes (e.g. species), by analyzing the last-layer weights of a trained deep neural network classifier, and how that might inform the design of interpretable models. 
+tags: [AI, deep learning, neural networks, similarity metric]
+description: I show how you can quantify the relationships between classes (e.g. species), by analyzing the last-layer weights of a trained deep neural network classifier, and how that might inform the design of interpretable models
 image: "/classification-weight-analysis/relationship.png"
 usemathjax: true
 ---
