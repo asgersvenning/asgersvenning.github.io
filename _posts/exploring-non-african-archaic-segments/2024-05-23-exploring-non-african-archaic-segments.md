@@ -3,7 +3,7 @@ title: "Project: Exploring non-African archaic segments"
 date: 23-05-2023 00:00 CET
 modified: 18-09-2025 11:55 CET
 tags: [population genomics, bioinformatics, genetics, archaic ancestry]
-description: I utilize the positions of the archaic segments identified by Skov et al. to explore the distribution and similarity of archaic segments among individuals from different populations and geographical regions
+description: An exploration of the distribution and similarity in archaic segments among populations and geographical regions outside Africa
 image: "/exploring-non-african-archaic-segments/cluster_thumbnail.webp"
 ---
 

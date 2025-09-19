@@ -31,4 +31,4 @@ I am a PhD student at the department of Ecoscience at Aarhus University with a p
 I also have a B.Sc. and half M.Sc. in biology from Aarhus University, in which I specialized in computational and statistical ecology and bioinformatics. I did my bachelors on the functional ecology of trees in the United States using the massive FIA dataset, and have done projects related to animal behavior using traditional GPS-collar data and statistical methods as well as historic population analysis using the **A**ncestral **R**ecombination **G**raph (ARG) and **S**equential **M**arkovian **C**oalescent (SMC) framework.
 
 <embed src="https://asgersvenning.com/curriculum-vitae/cv.pdf" type="application/pdf" style="width: 100%; aspect-ratio: 1;">
-
+<pre class="highlight">CV maintained at <a href="https://github.com/asgersvenning/curriculum-vitae/">https://github.com/asgersvenning/curriculum-vitae</a></pre>
