@@ -8,6 +8,17 @@ image: "/qualifying-phd-exam/moths_circled_thumbnail.webp"
 usemathjax: true
 ---
 
+# When you're having fun...
+Two out of four years in my PhD have already passed --- I guess time does really fly when you're "having fun"!
+All jokes aside, these two years have been really great, although sometimes also quite tough, but always *always* engaging and interesting.
+
+### Some reflections
+A PhD might not be for everyone --- the uncertainty, haphazard schedule, travelling and all considered --- but at least in my case it allows an *attempt* at satisfying my unrelenting curiosity by giving me the freedom to come up with an idea and put my head down under until something or another clicks.
+I might have been a bit stressed, when I was rushing to finish the ML pipeline before XPRIZE last spring, but at the end of the day the learning experience with building such a pipeline was immense, and the experience of being part of the XPRIZE Rainforest finals in Manaus was hectic and crazy, exhausting and overwhelming, but it was also extremely fun and exciting.
+
+I think that's a general lesson I've learned during these first two years --- or at least cemented to a much higher degree than they were in my mind before --- things that seem impossible are almost never that, they are hard, sometimes even extremely hard, but if I really try I *will* succeed and it will be both much more fun, but also satisfying than I thought.
+So I will try to remember that, as I am sure that there will be plenty more where that comes from in the next two years, but I look forward to it!
+
 # A teaser
 Below are some hand-picked excerpts from my qualifying exam --- that I passed!&nbsp; 🥳🎉
 > (If you're intrigued my full progress report contains a lot more details and is available at the bottom of this page)
